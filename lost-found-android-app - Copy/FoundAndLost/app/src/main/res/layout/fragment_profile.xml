@@ -41,7 +41,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_margin="10dp"
-                    android:text="User Name"
+                    android:text="achhada_2101cs03"
                     android:textSize="25dp"
                     android:textStyle="bold" />
 
@@ -53,10 +53,17 @@
 
     </androidx.cardview.widget.CardView>
 
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="464dp"
+        android:layout_height="286dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/iitp" />
+
     <Button
         android:id="@+id/SignOutBtn"
         android:layout_width="140dp"
-        android:layout_height="62dp"
+        android:layout_height="61dp"
         android:layout_gravity="center"
         android:layout_marginVertical="250dp"
         android:text="Log Out"

@@ -13,8 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:hint="Your Name"
-        android:textSize="25dp"
+        android:hint="Enter Your Name *"
+        android:textSize="22dp"
         android:textStyle="bold" />
 
     <EditText
@@ -22,8 +22,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:hint="Please Enter Mobile Number"
-        android:textSize="25dp"
+        android:hint="Enter Your Mobile Number *"
+        android:inputType="number"
+        android:textSize="22dp"
         android:textStyle="bold" />
 
     <EditText
@@ -31,8 +32,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:hint="Lost Item Name"
-        android:textSize="25dp"
+        android:hint="Lost Item Name *"
+        android:textSize="22dp"
         android:textStyle="bold" />
 
     <EditText
@@ -40,8 +41,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:hint="Lost Item Color"
-        android:textSize="25dp"
+        android:hint="Lost Item Color *"
+        android:textSize="22dp"
         android:textStyle="bold" />
 
 
@@ -50,8 +51,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:hint="Location"
-        android:textSize="25dp"
+        android:hint="Location *"
+        android:textSize="22dp"
         android:textStyle="bold" />
 
     <EditText
@@ -59,9 +60,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:hint="Where you lost it(e.g:Park)"
-        android:textSize="23dp"
+        android:hint="Where you lost it(e.g: Block 9 ) *"
+        android:textSize="22dp"
         android:textStyle="bold" />
+    <EditText
+        android:id="@+id/lostItemComments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:hint="Any Comments"
+        android:inputType="textMultiLine" />
 
 
     <Button
@@ -74,5 +86,13 @@
         android:textSize="25dp"
         android:textStyle="bold"
         app:backgroundTint="#0048FF" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Necessary things are marked by *"
+        android:textColor="#FF0000"
+        android:textSize="22sp" />
 
 </LinearLayout>

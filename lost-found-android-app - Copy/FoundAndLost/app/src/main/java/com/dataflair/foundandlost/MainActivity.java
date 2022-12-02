@@ -58,15 +58,16 @@ public class MainActivity extends AppCompatActivity {
                         case R.id.homeMenu:
                             fragment = new homeFragment();
                             break;
-                        case R.id.searchMenu:
-                            fragment = new SearchItemFragment();
+                        case R.id.notificationMenu:
+                            fragment = new NotificationFragment();
                             break;
 
                         case R.id.addItemMenu:
                             fragment = new AddItemFragment();
                             break;
-                        case R.id.notificationMenu:
-                            fragment = new NotificationFragment();
+
+                            case R.id.searchMenu:
+                            fragment = new SearchItemFragment();
                             break;
                         case R.id.profileMenu:
                             fragment = new ProfileFragment();

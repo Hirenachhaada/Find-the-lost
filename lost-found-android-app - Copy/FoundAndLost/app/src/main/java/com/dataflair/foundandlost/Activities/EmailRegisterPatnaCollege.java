@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import java.util.*;
 
 import com.dataflair.foundandlost.R;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -49,12 +50,8 @@ public class EmailRegisterPatnaCollege extends AppCompatActivity {
     private void login() {
         String emailId = email.getText().toString().trim();
         String passwordId = password.getText().toString().trim();
-//        if(emailId != "*_*@iitp.ac.in")
-//        {
-//            Toast.makeText(activity_register.this, "Write the IIT Patna Webmail email", Toast.LENGTH_LONG);
-//            email.setText("");
-//            return;
-//        }
+        if (emailId.endsWith("@iitp.ac.in")){
+
         mAuth.createUserWithEmailAndPassword(emailId,passwordId).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -69,10 +66,19 @@ public class EmailRegisterPatnaCollege extends AppCompatActivity {
             }
         });
     }
+    else
+    {
+        email.setText("");
+        password.setText("");
+        Toast.makeText(EmailRegisterPatnaCollege.this,"Please enter the IIT Patna official Webmail",Toast.LENGTH_LONG).show();
+    }}
     private void sendVerificationEmail()
     {
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         Toast.makeText(EmailRegisterPatnaCollege.this, "verification mail", Toast.LENGTH_SHORT);
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+        Toast.makeText(EmailRegisterPatnaCollege.this, "verification mail" + user, Toast.LENGTH_SHORT);
+        assert user != null;
         user.sendEmailVerification()
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
